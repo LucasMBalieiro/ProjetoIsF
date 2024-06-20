@@ -1,11 +1,10 @@
 create table alunoIsF(
-    idAluno serial,
-    login char(256) unique,
+    logonAlunoIsF varchar(256) unique,
 
-    primary key (idAluno).
+    primary key (logonAlunoIsF).
 
-    CONSTRAINT fk_login
-        FOREIGN KEY (login)
+    CONSTRAINT fk_logon
+        FOREIGN KEY (logon)
         REFERENCES usuario
         ON DELETE CASCADE
 )

@@ -1,6 +1,7 @@
 create table proeficienciaAlunoIsF(
     idAluno serial,
-    nivel int,
+    idioma ENUM("Inglês", "Português", "Alemão", "Francês", "Italiano", "Espanhol", "Japonês") not null,
+    nivel char(2),
     comprovanteProeficiencia TEXt,
 
     primary key (idAluno, nivel),

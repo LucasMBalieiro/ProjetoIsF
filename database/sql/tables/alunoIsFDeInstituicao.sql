@@ -2,12 +2,12 @@ create table alunoIsFDeInstituicao(
     nDocumento varchar(20),
     cargo int,
     areaAtuacao int,
-    idAluno serial,
+    logonAlunoDeInstituicao varchar(256),
 
     primary key (nDocumento),
 
-    constraint fk_idAluno   
-        foreign key (idAluno)
+    constraint fk_logonAlunoDeInstituicao   
+        foreign key (logonAlunoDeInstituicao)
         references alunoIsF
         delete on cascade
 );

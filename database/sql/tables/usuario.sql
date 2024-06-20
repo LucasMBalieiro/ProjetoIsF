@@ -1,5 +1,5 @@
 create table usuario(
-    login char(256),
+    logon varchar(256),
     nome varchar(256) not null,
     sobrenome varchar(256) not null,
     DDI int not null,
@@ -10,8 +10,8 @@ create table usuario(
     ativo bit default 1,
     nomeEmail varchar(256) not null,
     dominio int not null,
-    senha varchar(256) not null,
+    senha bit(256) not null,
     tipo int not null,
 
-    primary key (login)
+    primary key (logon)
 );

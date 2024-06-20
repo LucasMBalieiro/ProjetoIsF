@@ -1,6 +1,6 @@
 CREATE TABLE professorIsF(
 
-    logon INT,
+    logon varchar(256),
     idProfessor SERIAL,
     poca TEXT,
     inicio DATE NOT NULL,

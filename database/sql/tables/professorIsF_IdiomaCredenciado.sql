@@ -1,9 +1,9 @@
 CREATE TABLE professorIsF_IdiomaCredenciado(
 
     idProfessor INT,
-    idioma VARCHAR(32),
+    idioma ENUM("Inglês", "Português", "Alemão", "Francês", "Italiano", "Espanhol", "Japonês") not null,
     nivel CHAR(2),
-    inicio DATE,
+    inicio DATE not null,
     fim DATE,
     comprovante TEXT,
     validade DATE,

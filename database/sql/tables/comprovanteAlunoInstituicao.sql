@@ -1,7 +1,7 @@
 create table comprovanteAlunoInstituicao(
-    nDocumento varchar(20),
+    numeroDocumento varchar(20),
     idInstituicao serial,
-    inicio date,
+    inicio date not null,
     termino date,
     comprovante TEXT,
 
