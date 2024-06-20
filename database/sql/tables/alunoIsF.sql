@@ -1,7 +1,7 @@
 create table alunoIsF(
     logonAlunoIsF varchar(256) unique,
 
-    primary key (logonAlunoIsF).
+    primary key (logonAlunoIsF),
 
     CONSTRAINT fk_logon
         FOREIGN KEY (logon)
