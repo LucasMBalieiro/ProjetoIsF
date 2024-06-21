@@ -6,8 +6,5 @@ create table alunoIsFDeInstituicao(
 
     primary key (nDocumento),
 
-    constraint fk_logonAlunoDeInstituicao   
-        foreign key (logonAlunoDeInstituicao)
-        references alunoIsF
-        delete on cascade
+    foreign key (logonAlunoDeInstituicao) references alunoIsF(logonAlunoIsF) on delete cascade
 );

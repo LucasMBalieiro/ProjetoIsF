@@ -1,5 +1,5 @@
 create table usuario(
-    logon varchar(256),
+    logon varchar(256), --Arrumar o tamanho
     nome varchar(256) not null,
     sobrenome varchar(256) not null,
     DDI int not null,
