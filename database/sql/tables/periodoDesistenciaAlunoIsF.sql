@@ -1,11 +1,11 @@
 create table periodoDesistenciaAlunoIsf(
-    idAluno serial,
+    logon varchar(100),
     editalDesistencia varchar(6),
 
-    primary key (idAluno),
+    primary key (logon),
 
-    CONSTRAINT fk_idAluno
-        FOREIGN KEY (idAluno)
-        REFERENCES alunoIsF
+    CONSTRAINT fk_logonAlunoIsFPeriodoDesistencia
+        FOREIGN KEY (logon)
+        REFERENCES alunoIsF(logonAlunoIsF)
         ON DELETE CASCADE
 );

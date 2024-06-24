@@ -5,7 +5,7 @@ create table instituicaoEstrangeira(
 
     CONSTRAINT fk_instituicaoEstrangeira
         FOREIGN KEY (idInstituicao)
-        REFERENCES instituicaoEnsino
+        REFERENCES instituicaoEnsino(idInstituicao)
         ON DELETE CASCADE,
     
     CONSTRAINT pk_instituicaoEstrangeira

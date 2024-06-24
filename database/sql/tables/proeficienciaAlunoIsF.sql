@@ -1,13 +1,13 @@
 create table proeficienciaAlunoIsF(
-    idAluno serial,
+    logonAlunoIsF varchar(100),
     idioma ENUM("Inglês", "Português", "Alemão", "Francês", "Italiano", "Espanhol", "Japonês") not null,
     nivel char(2),
     comprovanteProeficiencia TEXt,
 
-    primary key (idAluno, nivel),
+    primary key (logonAlunoIsF, nivel),
 
-    constraint fk_idAluno
-        foreign key (idAluno)
-        references AlunoIsF
-        delete on cascade
+    constraint fk_logonAlunoIsFCertificadoProficiencia
+        foreign key (logonAlunoIsF)
+        references AlunoIsF(logonAlunoIsF)
+        on delete cascade
 );

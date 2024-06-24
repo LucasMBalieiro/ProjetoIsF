@@ -1,17 +1,17 @@
 create table comprovanteAlunoInstituicao(
-    numeroDocumento varchar(20),
+    logon varchar(100),
     idInstituicao serial,
     inicio date not null,
     termino date,
     comprovante TEXT,
 
-    primary key (nDocumento, idInstituicao),
+    primary key (logon, idInstituicao, inicio),
 
-    constraint fk_nDocumento
-        foreign key (nDocumento)
-        references alunoIsFDeInstituicao,
+    constraint fk_logonAlunoDeInstituicao
+        foreign key (logon)
+        references alunoIsFDeInstituicao(logonAlunoDeInstituicao),
 
     constraint fk_idInstituicao
         foreign key (idInstituicao)
-        references instituicaoEnsino
+        references instituicaoEnsino(idInstituicao)
 );
