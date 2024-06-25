@@ -4,7 +4,8 @@ create table proeficienciaAlunoIsF(
     nivel char(2),
     comprovanteProeficiencia TEXt,
 
-    primary key (logonAlunoIsF, nivel),
+    constraint pk_proficienciaAlunoIsF 
+        primary key (logonAlunoIsF, nivel, idioma),
 
     constraint fk_logonAlunoIsFCertificadoProficiencia
         foreign key (logonAlunoIsF)

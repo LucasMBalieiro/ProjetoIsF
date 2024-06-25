@@ -1,11 +1,11 @@
 create table instituicaoBrasileira(
     idInstituicao serial,
-    cnpj varchar(20),
-    sigla varchar(20),
+    cnpj varchar(14),
+    sigla varchar(10),
 
     CONSTRAINT fk_instituicaoBrasileira
         FOREIGN KEY (idInstituicao)
-        REFERENCES instituicaoEnsino
+        REFERENCES instituicaoEnsino(idInstituicao)
         ON DELETE CASCADE,
     
     CONSTRAINT pk_instituicaoBrasileira
