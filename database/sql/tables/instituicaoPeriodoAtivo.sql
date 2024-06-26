@@ -1,5 +1,5 @@
-create table instituicaoPeridoAtivo(
-    idInstituicao serial,
+create table instituicaoPeriodoAtivo(
+    idInstituicao BIGINT NOT NULL AUTO_INCREMENT ,
     inicio date not null,
     termino date,
     status boolean,

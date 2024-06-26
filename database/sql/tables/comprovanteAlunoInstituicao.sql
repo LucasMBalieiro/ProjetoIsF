@@ -1,6 +1,6 @@
 create table comprovanteAlunoInstituicao(
     logon varchar(100),
-    idInstituicao serial,
+    idInstituicao BIGINT NOT NULL AUTO_INCREMENT,
     inicio date not null,
     termino date,
     comprovante TEXT,

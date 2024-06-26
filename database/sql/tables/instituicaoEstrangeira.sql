@@ -1,5 +1,5 @@
 create table instituicaoEstrangeira(
-    idInstituicao serial,
+    idInstituicao BIGINT NOT NULL AUTO_INCREMENT,
     pais varchar(20),
     sigla varchar(20),
 

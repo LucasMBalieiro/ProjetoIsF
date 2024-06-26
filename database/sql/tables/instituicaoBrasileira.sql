@@ -1,7 +1,7 @@
 create table instituicaoBrasileira(
-    idInstituicao serial,
+    idInstituicao BIGINT NOT NULL AUTO_INCREMENT,
     cnpj varchar(14),
-    sigla varchar(10),
+    sigla varchar(10) UNIQUE,
 
     CONSTRAINT fk_instituicaoBrasileira
         FOREIGN KEY (idInstituicao)

@@ -1,7 +1,12 @@
 CREATE TABLE alunoGraduacao(
 
-idProfessor INT PRIMARY KEY,
+    logon varchar(100),
 
-FOREIGN KEY (idProfessor) REFERENCES professorIsF
+    constraint fk_logonAlunoGraduacao
+        FOREIGN KEY (logon) REFERENCES professorIsF(logon)
+        on delete cascade,
+
+    constraint pk_logonAlunoGraduacao
+        PRIMARY KEY (logon)
 );
 

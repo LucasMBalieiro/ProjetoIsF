@@ -1,5 +1,5 @@
 create table instituicaoEnsino(
-    idInstituicao serial,
+    idInstituicao BIGINT NOT NULL AUTO_INCREMENT,
     nome varchar(256) unique,
     documentoVinculo TEXT,
 

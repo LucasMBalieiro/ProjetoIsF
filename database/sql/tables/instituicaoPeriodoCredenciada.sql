@@ -1,10 +1,10 @@
-create table instituicaoPeridoCredenciada(
-    idInstituicao serial,
+create table instituicaoPeriodoCredenciada(
+    idInstituicao BIGINT NOT NULL AUTO_INCREMENT,
     inicio date not null,
     termino date,
     status boolean,
 
-    CONSTRAINT fk_instituicaoPeridoCredenciada
+    CONSTRAINT fk_instituicao
         FOREIGN KEY (idInstituicao)
         REFERENCES instituicaoEnsino(idInstituicao)
         ON DELETE CASCADE,
@@ -12,6 +12,8 @@ create table instituicaoPeridoCredenciada(
     CONSTRAINT pk_instituicaoPeridoCredenciada
         PRIMARY KEY (idInstituicao, inicio)
 )
+
+-- mesma coisa do instituicaoPeriodoAtivoPeridoCredenciada
 
 DELIMITER //
 

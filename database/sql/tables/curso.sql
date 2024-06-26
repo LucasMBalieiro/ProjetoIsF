@@ -1,20 +1,25 @@
 CREATE TABLE curso(
     
-    idCurso SERIAL PRIMARY KEY,
+    idCurso BIGINT NOT NULL AUTO_INCREMENT,
 
-    nome VARCHAR(64) NOT NULL,
-    idioma VARCHAR(32) NOT NULL,
+    nome VARCHAR(64) NOT NULL unique,
+    idioma ENUM("Inglês", "Português", "Alemão", "Francês", "Italiano", "Espanhol", "Japonês") not null,
     categoria VARCHAR(32) NOT NULL,
     nivel CHAR(2) NOT NULL,
-    cargaHoraria INT NOT NULL,
+    cargaHoraria char(2) NOT NULL,
     ementa TEXT NOT NULL,
     justificativa TEXT NOT NULL,
     objetivos TEXT NOT NULL,
 
-    --Conteudo pragmatico
+    -- Conteúdo Pragmático
     metodologia TEXT,
     descAvaliacao TEXT,
     aspecFuncionais TEXT,
     aspecInterculturais TEXT,
-    aspecLinguisticos TEXT
+    aspecLinguisticos TEXT,
+
+    CONSTRAINT pk_curso
+        PRIMARY KEY (idCurso)
 );
+
+-- Precisamos ver quais são as categorias possíveis, melhor manter como enum do que varchar

@@ -1,8 +1,9 @@
-INSERT INTO instituicaoperidocredenciada (
-    idInstituicao,
-    inicio
-  )
+INSERT INTO relturmaprofessorisf (logon, idTurma, inicio, termino)
 VALUES (
-    4,
-    '2024-12-27'
+    'Letus',
+    2,
+    '2024-07-01',
+    '2024-06-02'
   );
+
+  show triggers

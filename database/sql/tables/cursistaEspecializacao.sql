@@ -1,6 +1,11 @@
 CREATE TABLE cursistaEspecializacao(
 
-idProfessor INT PRIMARY KEY,
+    logon VARCHAR(100),
 
-FOREIGN KEY (idProfessor) REFERENCES professorIsF
+    CONSTRAINT
+        FOREIGN KEY (logon) REFERENCES professorIsF(logon)
+        on delete cascade,
+    
+    CONSTRAINT 
+        PRIMARY KEY(logon)
 );

@@ -15,3 +15,5 @@ create table relTurmaCurso(
     CONSTRAINT pk_relTurmaCurso
         PRIMARY KEY (idTurma, idCurso)
 )
+
+-- Não precisa dessa tabela
