@@ -1,9 +1,9 @@
 DELIMITER //
 
-CREATE TRIGGER tgr_verificaDataInstituicaoPeriodoAtivo
-BEFORE INSERT ON instituicaoperiodoativo
+CREATE TRIGGER tgr_verificaDataRelacaoInstituicaoProfessorIsF
+BEFORE INSERT ON relprofessorisfinstituicao
 FOR EACH ROW
-BEGIN 
+BEGIN
     IF NEW.inicio > CURDATE() THEN
         SIGNAL SQLSTATE '45000' 
         SET MESSAGE_TEXT = 'A data de início deve ser uma data anterior à data atual';

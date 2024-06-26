@@ -1,16 +1,21 @@
 CREATE TABLE relProfessorIsFInstituicao(
 
-    idProfessor INT,
-    idInstituicao INT,
-    inicio DATE,
+    logon varchar(100),
+    idInstituicao BIGINT NOT NULL AUTO_INCREMENT,
+    inicio DATE not null,
     termino DATE,
     comprovanteMatricula TEXT,
 
-    CONSTRAINT fk_relProfessorIsFInstituicao
-    FOREIGN KEY (idProfessor)
-    REFERENCES professorIsF
+    CONSTRAINT fk_logonProfessorIsFRelacionadoInstituicao
+    FOREIGN KEY (logon)
+    REFERENCES professorIsF(logon)
+    ON DELETE CASCADE,
+
+    CONSTRAINT fk_InstituicaoRelacionadaProfessorIsF
+    FOREIGN KEY (idInstituicao)
+    REFERENCES instituicaoensino(idInstituicao)
     ON DELETE CASCADE,
 
     CONSTRAINT pk_relProfessorIsFInstituicao
-    PRIMARY KEY (idProfessor, idInstituicao, inicio, comprovanteMatricula) --Precisa disso tudo na PK?
+    PRIMARY KEY (logon, idInstituicao, inicio)
 );
