@@ -1,9 +1,7 @@
-INSERT INTO relturmaprofessorisf (logon, idTurma, inicio, termino)
+INSERT INTO turmadatahora (duracao, hora, diaSemana, idTurma)
 VALUES (
-    'Letus',
-    2,
-    '2024-07-01',
-    '2024-06-02'
-  );
-
-  show triggers
+    '2',
+    '12:00',
+    'Terça',
+    1
+    );

@@ -1,11 +1,11 @@
 CREATE TABLE cursoAvaliacoes(
 
-    idCurso INT,
+    idCurso BIGINT not null,
     tipoAvaliacao VARCHAR(32),
 
     CONSTRAINT fk_cursoAvaliacoes
         FOREIGN KEY (idCurso)
-        REFERENCES curso
+        REFERENCES curso(idCurso)
         ON DELETE CASCADE,
     
     CONSTRAINT pk_cursoAvaliacoes

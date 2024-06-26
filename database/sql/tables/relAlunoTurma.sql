@@ -1,18 +1,18 @@
 create table relAlunoTurma(
-    idAluno serial,
-    idTurma serial,
-    status boolean,
+    logon varchar(100),
+    idTurma BIGINT not null,
+    status enum('aprovado', 'evadido', 'reprovado', 'em andamento') default 'em andamento'
 
     CONSTRAINT fk_relAlunoTurma_aluno
-        FOREIGN KEY (idAluno)
-        REFERENCES AlunoIsF
+        FOREIGN KEY (logon)
+        REFERENCES AlunoIsF(logonAlunoIsF)
         ON DELETE CASCADE,
 
     CONSTRAINT fk_relAlunoTurma_turma
         FOREIGN KEY (idTurma)
-        REFERENCES turmaOC
+        REFERENCES turmaOC(idTurma)
         ON DELETE CASCADE,
     
     CONSTRAINT pk_relAlunoTurma
-        PRIMARY KEY (idAluno, idTurma)
+        PRIMARY KEY (logon, idTurma)
 )
